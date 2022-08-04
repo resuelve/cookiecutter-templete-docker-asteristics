@@ -77,7 +77,7 @@ $ cookiecutter git@github.com/resuelve/cookiecutter-templete-docker-asteristics.
 ```
 ### Contributions
 
-I you find this useful please buy me a coffee :P, I'm just kidding, just try to use it and give feedback.
+I you find this useful please send me a kitty image :P, I'm just kidding, just try to use it and give feedback.
 
 ### References
 
