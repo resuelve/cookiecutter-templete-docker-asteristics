@@ -1,0 +1,7 @@
+{
+  "org_name": "resuelve",
+  "project_branch": "main",
+  "project_name": "example-api",
+  "project_runner": "self-hosted-rtd-prod",
+  "ubuntu_version": "ubuntu20"
+}

@@ -1,0 +1,44 @@
+version: "3.7"
+services:
+  app:
+    build:
+        context: ./
+        dockerfile: Dockerfile
+    container_name: asteristics-app
+    volumes:
+      - ./storage/app/public:/var/www/storage/app/public
+    depends_on:
+        - db
+    links:
+        - db
+  nginx:
+      image: nginx:alpine
+      container_name: asteristics-nginx
+      restart: unless-stopped
+      ports:
+          - 8000:80
+      volumes:
+          - ./docker/nginx:/etc/nginx/conf.d/
+  db:
+      image: postgres:12.3-alpine
+      container_name: asteristics-db
+      restart: always
+      volumes:
+        - './postgres_data:/var/lib/postgresql/data'
+      environment:
+          POSTGRES_DB: ${DB_DATABASE}
+          POSTGRES_USER: ${DB_USERNAME}
+          POSTGRES_PASSWORD: ${DB_PASSWORD}
+      ports:
+          - "54320:5432"
+
+  pgadmin:
+      image: dpage/pgadmin4
+      container_name: asteristics-pgadmin
+      environment:
+          PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+          PGADMIN_DEFAULT_PASSWORD: "admin"
+      ports:
+          - "8080:80"
+      depends_on:
+          - db
