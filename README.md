@@ -10,7 +10,6 @@ By using this template you can generate a project directory with the follow:
 
 * **README.md**: Custom readme with usage instructions
 * **.gitignore**: Custom ignores for elixir development
-* **.github/workflows/deploy-production.yml** Github actions workflow for asteristics continuos integration process
 * **Dockerfile**: Docker image instructions to release astristics projects
 * **.dockerignore**: Custom docker ignore rules for asteristics projects
 
@@ -47,10 +46,7 @@ example-api/.editorconfig
 example-api/README.md
 example-api/.dockerignore
 example-api/.gitignore
-example-api/.github
-example-api/.github/workflows
-example-api/.github/workflows/deploy-production.yml
-example-api/.github/PULL_REQUEST_TEMPLATE.md
+
 ```
 
 ### Test resulting yaml
@@ -58,7 +54,7 @@ example-api/.github/PULL_REQUEST_TEMPLATE.md
 You can use `yamllint` to lint your resulting Github actions workflow, for example:
 
 ```shell
-$ yamllint example-api/.github/workflows/deploy-production.yml
+$ yamllint example-api/docker-compose.yml
 ```
 
 Remember to test locally and fix any error reported by the linter before commit.
