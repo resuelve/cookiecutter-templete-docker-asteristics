@@ -37,7 +37,7 @@ services:
       container_name: asteristics-pgadmin
       environment:
           PGADMIN_DEFAULT_EMAIL: "${{ secrets.email }}"
-          PGADMIN_DEFAULT_PASSWORD: ""${{ secrets.password }}""
+          PGADMIN_DEFAULT_PASSWORD: "${{ secrets.password }}"
       ports:
           - "8080:80"
       depends_on:

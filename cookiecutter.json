@@ -1,7 +1,8 @@
 {
   "org_name": "resuelve",
   "project_branch": "main",
-  "project_name": "example-api",
+  "project_name": "asteristics",
   "project_runner": "self-hosted-rtd-prod",
-  "ubuntu_version": "ubuntu20"
+  "ubuntu_version": "ubuntu20",
+  "deploy_image_version": "latest"
 }

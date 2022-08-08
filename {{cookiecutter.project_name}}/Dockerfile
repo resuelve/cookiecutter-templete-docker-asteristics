@@ -1,4 +1,4 @@
-FROM resuelve/asteristics:master-07f094d
+FROM {{ cookiecutter.org_name }}/{{ cookiecutter.project_name }}:{{ cookiecutter.deploy_image_version }}
 
 COPY .env /var/www
 RUN php artisan key:generate
