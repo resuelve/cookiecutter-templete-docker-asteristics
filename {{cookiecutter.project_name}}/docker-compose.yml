@@ -36,8 +36,8 @@ services:
       image: dpage/pgadmin4
       container_name: asteristics-pgadmin
       environment:
-          PGADMIN_DEFAULT_EMAIL: "${{ secrets.email }}"
-          PGADMIN_DEFAULT_PASSWORD: "${{ secrets.password }}"
+          PGADMIN_DEFAULT_EMAIL: "{% raw %}${{ secrets.email }}{% endraw %}"
+          PGADMIN_DEFAULT_PASSWORD: "{% raw %}${{ secrets.password }}{% endraw %}"
       ports:
           - "8080:80"
       depends_on:
