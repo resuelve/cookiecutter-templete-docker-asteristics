@@ -1,0 +1,3 @@
+*.git
+src/deps
+src/_build
