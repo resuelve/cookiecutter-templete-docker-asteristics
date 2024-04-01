@@ -7,6 +7,7 @@ services:
     container_name: asteristics-app
     volumes:
       - ./storage/app/public:/var/www/storage/app/public
+      - ./storage/logs:/var/www/storage/logs
     depends_on:
         - db
     links:
