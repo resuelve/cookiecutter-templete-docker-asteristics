@@ -1,3 +1,4 @@
 *.git
 src/deps
 src/_build
+storage/
