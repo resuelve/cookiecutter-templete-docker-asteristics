@@ -5,6 +5,8 @@ services:
         context: ./
         dockerfile: Dockerfile
     container_name: asteristics-app
+    env_file:
+      - ./.env
     volumes:
       - ./storage/app/public:/var/www/storage/app/public
       - ./storage/logs:/var/www/storage/logs
