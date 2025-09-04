@@ -8,6 +8,7 @@ services:
     env_file:
       - ./.env
     volumes:
+      - ./docker/php-fpm.d/www.conf:/usr/local/etc/php-fpm.d/www.conf:ro
       - ./storage/app/public:/var/www/storage/app/public
       - ./storage/logs:/var/www/storage/logs
     depends_on:
